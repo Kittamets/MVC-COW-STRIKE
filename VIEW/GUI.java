@@ -45,6 +45,8 @@ public class GUI {
                 String text_input = textField.getText();
                 String[] tmp = ReadController.findCow(text_input);
 
+                panel2.removeAll();
+
                 if ((tmp != null) && InputController.isZeroFirst(tmp[0]) && InputController.isDigitAnd8Digits(text_input) && InputController.isCowBlue(tmp[1])) {
                     JOptionPane.showMessageDialog(frame2, String.format("Cow ID: %s, Color: %s, Age: %s, Month: %s", tmp[0], tmp[1], tmp[2], tmp[3]));
 
